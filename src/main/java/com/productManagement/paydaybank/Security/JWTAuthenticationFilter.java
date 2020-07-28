@@ -31,11 +31,10 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
         this.authenticationManager = authenticationManager;
     }
 
-    // gelen request’teki Header’i parse edip Token’i alır
     @Override
     public Authentication attemptAuthentication(HttpServletRequest req,
                                                 HttpServletResponse res) throws AuthenticationException {
-        try {
+    	 try {
             Manager creds = new ObjectMapper()
                     .readValue(req.getInputStream(), Manager.class);
 
@@ -50,7 +49,6 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
         }
     }
 
-    // başarılı bir şekilde login olmuş kullanıcıya JWT yollar
     @Override
     protected void successfulAuthentication(HttpServletRequest req,
                                             HttpServletResponse res,

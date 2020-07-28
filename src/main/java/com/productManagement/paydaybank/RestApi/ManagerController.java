@@ -12,7 +12,7 @@ import com.productManagement.paydaybank.Entities.Manager;
 import com.productManagement.paydaybank.Entities.Products;
 
 @RestController
-@CrossOrigin(origins = "*", maxAge = 3600)
+@CrossOrigin(origins = "*")
 @RequestMapping("/manager")
 public class ManagerController {
 	
