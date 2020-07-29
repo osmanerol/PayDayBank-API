@@ -42,4 +42,10 @@ public class ManagerService implements IManagerService,	UserDetailsService{
         return new User(manager.getUsername(), manager.getPassword(), emptyList());
 	}
 
+	@Override
+	public void updateManager(Manager manager) {
+		this.managerDal.updateManager(manager);
+	}
+
+
 }

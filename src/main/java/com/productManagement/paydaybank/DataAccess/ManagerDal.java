@@ -35,4 +35,12 @@ public class ManagerDal implements IManagerDal {
 		return manager;
 	}
 
+	@Override
+	@Transactional
+	public void updateManager(Manager manager) {
+		Session session=entityManager.unwrap(Session.class);
+		session.saveOrUpdate(manager);
+	}
+
+
 }

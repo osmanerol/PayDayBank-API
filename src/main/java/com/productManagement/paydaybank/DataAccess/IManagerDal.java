@@ -5,4 +5,5 @@ import com.productManagement.paydaybank.Entities.Manager;
 public interface IManagerDal {
 	void addManager(Manager manager);
 	Manager findByUsername(String username);
+	void updateManager(Manager manager);
 }

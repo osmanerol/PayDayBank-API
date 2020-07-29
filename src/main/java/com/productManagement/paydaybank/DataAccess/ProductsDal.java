@@ -37,6 +37,7 @@ public class ProductsDal implements IProductsDal {
 	}
 
 	@Override
+	@Transactional
 	public void updateProduct(Products product) {
 		Session session=entityManager.unwrap(Session.class);
 		session.saveOrUpdate(product);

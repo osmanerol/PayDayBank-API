@@ -32,4 +32,14 @@ public class ManagerController {
 		this.managerService.addManager(manager);
     }
 	
+	@GetMapping("/getmanager/{username}")
+	public Manager getManager(@PathVariable String username) {
+		return this.managerService.findByUsername(username);
+	}
+	
+	@PutMapping("/updatemanager")
+	public void updateManager( @RequestBody Manager manager) {
+		this.managerService.updateManager(manager);
+	}
+	
 }

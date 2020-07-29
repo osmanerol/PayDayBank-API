@@ -31,7 +31,7 @@ public class ProductsController {
 		return this.productsService.getProductsById(id);
 	}
 	
-	@PostMapping("/products/updateproduct")
+	@PutMapping("/products/updateproduct")
 	public void updateProduct(@RequestBody Products product) {
 		this.productsService.updateProduct(product);
 	}

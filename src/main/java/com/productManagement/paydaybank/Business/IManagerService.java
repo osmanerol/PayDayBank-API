@@ -9,4 +9,5 @@ public interface IManagerService {
 	void addManager(Manager manager);
 	Manager findByUsername(String username);
 	UserDetails loadUserByUsername(String username) throws UsernameNotFoundException;
+	void updateManager(Manager manager);
 }
